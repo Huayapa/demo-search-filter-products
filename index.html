@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>demo-search-input-rxjs</title>
+  </head>
+  <body class="overflow-x-hidden min-h-dvh bg-[#181A27] px-[1rem]">
+    <header class="max-w-[1200px] mx-auto mt-[4rem] bg-[#00489F] p-8 rounded-xl flex flex-col gap-8">
+
+      <section class="flex gap-4 flex-wrap md:flex-nowrap w-full">
+        <input id="searchInput" type="search" placeholder="Buscar..." class="input" />
+
+        <select id="brandSelect" class="input"></select>
+        <select id="categorySelect" class="input"></select>
+        <select id="tagSelect" class="input"></select>
+
+        <button id="resetFilters" class="btn">Reiniciar</button>
+      </section>
+
+
+      <section class="w-full flex flex-col items-center gap-4">
+        <div id="priceRange" class="w-full"></div>
+        <span id="priceLabel" class="text-2xl text-white">$0 - $1000</span>
+      </section>
+
+    </header>
+
+    <main class="max-w-[1200px] mx-auto my-[4rem] bg-[#00489F] p-8 rounded-xl">
+
+      <section>
+        <ul id="listProds">
+          <li>Busca los productos</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

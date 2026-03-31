@@ -1,0 +1,140 @@
+@import "tailwindcss";
+.input {
+  @apply w-full outline-0 bg-[#ffffff] text-[#181A27] placeholder:text-[#181A27] text-sm border border-none rounded-md px-3 py-2 transition  duration-300 ease-in-out focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow;
+}
+
+.btn {
+  @apply rounded-md bg-[#4188E9] py-2 px-4 text-sm text-white shadow-md hover:bg-[#4188E940] cursor-pointer transition;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+select option {
+  padding: 10px;
+  background-color: #181A27;
+  color: #fff;
+  border-radius: 0 0 2rem 2rem;
+}
+
+
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+}
+.noUi-target {
+  background: #ffffff;
+  border: none;
+  border-radius: 99px;
+  height: 6px;
+  box-shadow: none;
+}
+
+.noUi-connect {
+  background: #4188E9;
+  border-radius: 99px;
+}
+
+.noUi-handle {
+  width: 18px !important;
+  height: 18px !important;
+  top: -7px !important;
+  right: -9px !important;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #4188E9 !important;
+  box-shadow: 0 0 0 3px rgba(106, 106, 106, 0.15) !important;
+  cursor: pointer;
+}
+
+.noUi-handle:focus {
+  box-shadow: 0 0 0 4px rgba(106, 106, 106, 0.15)  !important;
+  outline: none;
+}
+
+.noUi-handle::before,
+.noUi-handle::after {
+  display: none;
+}
+
+#listProds {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+@media (max-width: 600px) {
+  #listProds {
+  grid-template-columns: 100%;
+
+  }
+}
+
+
+
+#listProds li {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: box-shadow 0.2s;
+}
+
+#listProds li:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.product-brand {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00489F;
+}
+
+.product-category {
+  font-size: 12px;
+  background: #181A27;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 5px;
+  width: fit-content;
+}
+.product-tag {
+  font-size: 12px;
+  background: #4188E9;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.product-discount {
+  font-size: 12px;
+  background: #E33F23;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.product-tags {
+  display: flex;
+  gap: 0.4rem;
+}
